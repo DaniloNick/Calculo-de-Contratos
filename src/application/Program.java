@@ -16,11 +16,11 @@ public class Program {
 		
 		Locale.setDefault(Locale.US);
 		Scanner sc = new Scanner(System.in);
-		SimpleDateFormat sdf = new SimpleDateFormat("dd/mm/yyyy");
+		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 		
 		System.out.print("Enter department's name: ");
 		String departmentName = sc.nextLine();
-		System.out.print("Enter Worker data:");
+		System.out.println("Enter Worker data:");
 		System.out.print("Name: ");
 		String workerName = sc.nextLine();
 		System.out.print("Level: ");
@@ -50,7 +50,7 @@ public class Program {
 		int year = Integer.parseInt(monthAndYear.substring(3));
 		System.out.println("Name: " + worker.getName());
 		System.out.println("Department " + worker.getDepartment().getName());
-		System.out.println("Income for " + monthAndYear + ": " + String.format("%.2f", worker.income(year, month)));
+		System.out.println("Income for " + monthAndYear + ": " + String.format("%.2f", worker.income(month, year)));
 		
 		sc.close();
 	}	
